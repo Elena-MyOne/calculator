@@ -1,4 +1,4 @@
-import { populateDisplay } from "../../models/mathOperations";
+import { populateDisplay } from "../../models/populateDisplay";
 
 const body = document.querySelector('body');
 
@@ -10,6 +10,7 @@ export function renderBody() {
     <div class="calc">
       <div class="calc__body">
         <div class="calc__display display">
+          <div class="display__operation"></div>
           <input type="text" class="display__input" value="0" />
         </div>
         <div class="calc__buttons buttons">
@@ -37,7 +38,7 @@ export function renderBody() {
             <li class="buttons__digit buttons__digit-number">1</li>
             <li class="buttons__digit buttons__digit-number">2</li>
             <li class="buttons__digit buttons__digit-number">3</li>
-            <li class="buttons__digit">+</li>
+            <li class="buttons__digit buttons__digit-add">+</li>
             <li class="buttons__digit">+/-</li>
             <li class="buttons__digit buttons__digit-number">0</li>
             <li class="buttons__digit">.</li>

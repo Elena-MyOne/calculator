@@ -19,9 +19,17 @@
 }
 .display {
 
+  &__operation {
+    color: #888888;
+    padding: 20px 10px 0px;
+    font-size: 13px;
+    text-align: right;
+    min-height: 34px;
+  }
+
   &__input {
     background-color: $lightModeBgd;
-    padding: 20px 10px;
+    padding: 10px 10px 20px;
     width: 100%;
     text-align: right;
     font-size: 22px;
