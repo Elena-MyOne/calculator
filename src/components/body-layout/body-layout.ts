@@ -11,13 +11,13 @@ export function renderBody() {
       <div class="calc__body">
         <div class="calc__display display">
           <div class="display__operation"></div>
-          <input type="text" class="display__input" value="0" />
+          <input type="text" class="display__input" value="0" disabled/>
         </div>
         <div class="calc__buttons buttons">
           <ul class="buttons__digits">
             <li class="buttons__digit">%</li>
-            <li class="buttons__digit buttons__digit-clear-entry">CE</li>
-            <li class="buttons__digit buttons__digit-clear">C</li>
+            <li class="buttons__digit ">x<sup>y</sup></li>
+            <li class="buttons__digit buttons__digit-clear">AC</li>
             <li class="buttons__digit buttons__digit-del">DEL</li>
             <li class="buttons__digit">1/x</li>
             <li class="buttons__digit">x<sup>2</sup></li>
@@ -28,13 +28,13 @@ export function renderBody() {
             <li class="buttons__digit buttons__digit-number">7</li>
             <li class="buttons__digit buttons__digit-number">8</li>
             <li class="buttons__digit buttons__digit-number">9</li>
-            <li class="buttons__digit">
+            <li class="buttons__digit buttons__digit-multiply">
               <img src="../../assets/icons/multiply.svg" alt="" />
             </li>
             <li class="buttons__digit buttons__digit-number">4</li>
             <li class="buttons__digit buttons__digit-number">5</li>
             <li class="buttons__digit buttons__digit-number">6</li>
-            <li class="buttons__digit">-</li>
+            <li class="buttons__digit buttons__digit-subtract">-</li>
             <li class="buttons__digit buttons__digit-number">1</li>
             <li class="buttons__digit buttons__digit-number">2</li>
             <li class="buttons__digit buttons__digit-number">3</li>
