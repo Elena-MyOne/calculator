@@ -59,6 +59,25 @@ export function divide(symbol: string, target: HTMLElement, operation: HTMLEleme
   }
 }
 
+export function clear(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement): void {
+  if(target.closest('.buttons__digit-clear')) {
+    operation.textContent = '';
+    input.value = '0';
+  }
+}
+
+export function deleteSymbol(target: HTMLElement, input: HTMLInputElement): void {
+  if(target.closest('.buttons__digit-del')) {
+    let valueDisplay = input.value;
+    if (valueDisplay.length === 1) {
+      input.value = '0';
+    } else {
+      const newValue = valueDisplay.slice(0, -1);
+      input.value = newValue;
+    }
+  }
+}
+
 export function calculate(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement) {
   if (target.closest('.buttons__digit-equally')) {
     const operationValue = operation.textContent;
@@ -74,8 +93,6 @@ export function calculate(target: HTMLElement, operation: HTMLElement, input: HT
     operation.textContent = '';
   }
 }
-
-//TODO упростить add() и subtract()б выделить повторяющийся код в отдельную функцию
 
 export function displayDigit(target: HTMLElement, input: HTMLInputElement): string {
   let memory = '0';
