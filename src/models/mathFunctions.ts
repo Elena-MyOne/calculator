@@ -53,7 +53,11 @@ export function multiply(symbol: string, target: HTMLElement, operation: HTMLEle
   }
 }
 
-export function divide(symbol: string, target: HTMLElement, operation: HTMLElement, input: HTMLInputElement): void {}
+export function divide(symbol: string, target: HTMLElement, operation: HTMLElement, input: HTMLInputElement): void {
+  if (target.closest('.buttons__digit-division')) {
+    makeOperation(symbol, operation, input);
+  }
+}
 
 export function calculate(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement) {
   if (target.closest('.buttons__digit-equally')) {

@@ -1,5 +1,5 @@
 import { animateButton } from "./animations";
-import { displayDigit, add, calculate, subtract, multiply } from "./mathFunctions";
+import { displayDigit, add, calculate, subtract, multiply, divide } from "./mathFunctions";
 
 let memory = '';
 
@@ -14,6 +14,7 @@ export function populateDisplay(e: Event): void {
       add('+', target, operationDisplay, input);
       subtract('-', target, operationDisplay, input);
       multiply('x', target, operationDisplay, input);
+      divide('/', target, operationDisplay, input);
       calculate(target, operationDisplay, input);
     }
     
