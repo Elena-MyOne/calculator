@@ -1,19 +1,19 @@
 function operateResults(operation: string, input: string): number {
   if (operation) {
     if (operation.endsWith('+')) {
-      return parseInt(operation) + +input
+      return parseFloat(operation) + +input
     }
   
     if (operation.endsWith('-')) {
-      return parseInt(operation) - +input
+      return parseFloat(operation) - +input
     }
   
     if (operation.endsWith('x')) {
-      return parseInt(operation) * +input
+      return parseFloat(operation) * +input
     }
   
     if (operation.endsWith('/')) {
-      return parseInt(operation) / +input
+      return parseFloat(operation) / +input
     }
   }
   return +input
@@ -87,6 +87,13 @@ export function makeNegative(target: HTMLElement, input: HTMLInputElement): void
     } else {
       input.value = `-${valueDisplay}`
     }
+  }
+}
+
+export function addDot(target: HTMLElement, input: HTMLInputElement): void {
+  if(target.closest('.buttons__digit-dot')) {
+    let valueDisplay = input.value;
+    input.value = `${valueDisplay}.`
   }
 }
 
