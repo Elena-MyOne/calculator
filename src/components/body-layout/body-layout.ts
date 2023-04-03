@@ -39,7 +39,7 @@ export function renderBody() {
             <li class="buttons__digit buttons__digit-number">2</li>
             <li class="buttons__digit buttons__digit-number">3</li>
             <li class="buttons__digit buttons__digit-add">+</li>
-            <li class="buttons__digit">+/-</li>
+            <li class="buttons__digit buttons__digit-negative">+/-</li>
             <li class="buttons__digit buttons__digit-number">0</li>
             <li class="buttons__digit">.</li>
             <li class="buttons__digit buttons__digit-equally">=</li>

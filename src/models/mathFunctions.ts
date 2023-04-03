@@ -78,6 +78,18 @@ export function deleteSymbol(target: HTMLElement, input: HTMLInputElement): void
   }
 }
 
+export function makeNegative(target: HTMLElement, input: HTMLInputElement): void {
+  if(target.closest('.buttons__digit-negative')) {
+    let valueDisplay = input.value;
+    if (valueDisplay.startsWith('-')) {
+      const newValue = valueDisplay.slice(1);
+      input.value = newValue
+    } else {
+      input.value = `-${valueDisplay}`
+    }
+  }
+}
+
 export function calculate(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement) {
   if (target.closest('.buttons__digit-equally')) {
     const operationValue = operation.textContent;
