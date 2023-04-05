@@ -110,6 +110,13 @@ export function getPercent(target: HTMLElement, operation: HTMLElement, input: H
   }
 }
 
+export function square(target: HTMLElement, input: HTMLInputElement): void {
+  if(target.closest('.buttons__digit-square')) {
+    let valueDisplay = input.value;
+    input.value = Math.pow(+valueDisplay, 2).toString();
+  }
+}
+
 export function calculate(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement) {
   if (target.closest('.buttons__digit-equally')) {
     const operationValue = operation.textContent;

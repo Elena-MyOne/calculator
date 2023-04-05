@@ -20,7 +20,7 @@ export function renderBody() {
             <li class="buttons__digit buttons__digit-clear">AC</li>
             <li class="buttons__digit buttons__digit-del">DEL</li>
             <li class="buttons__digit">1/x</li>
-            <li class="buttons__digit">x<sup>2</sup></li>
+            <li class="buttons__digit buttons__digit-square">x<sup>2</sup></li>
             <li class="buttons__digit"><span>&#8730;</span><span style="border-top: 1px solid black">x</span></li>
             <li class="buttons__digit buttons__digit-division">
               <img src="../../assets/icons/division.svg" alt="" />
