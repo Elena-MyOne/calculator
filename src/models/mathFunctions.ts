@@ -117,6 +117,13 @@ export function square(target: HTMLElement, input: HTMLInputElement): void {
   }
 }
 
+export function getSquareRoot(target: HTMLElement, input: HTMLInputElement): void {
+  if(target.closest('.buttons__digit-square-root')) {
+    let valueDisplay = input.value;
+    input.value = Math.sqrt(+valueDisplay).toString();
+  }
+}
+
 export function calculate(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement) {
   if (target.closest('.buttons__digit-equally')) {
     const operationValue = operation.textContent;
