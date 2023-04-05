@@ -16,10 +16,10 @@ export function renderBody() {
         <div class="calc__buttons buttons">
           <ul class="buttons__digits">
             <li class="buttons__digit buttons__digit-percent">%</li>
-            <li class="buttons__digit ">x<sup>y</sup></li>
+            <li class="buttons__digit ">x!</li>
             <li class="buttons__digit buttons__digit-clear">AC</li>
             <li class="buttons__digit buttons__digit-del">DEL</li>
-            <li class="buttons__digit">1/x</li>
+            <li class="buttons__digit buttons__digit-one-divide">1/x</li>
             <li class="buttons__digit buttons__digit-square">x<sup>2</sup></li>
             <li class="buttons__digit buttons__digit-square-root"><span>&#8730;</span><span style="border-top: 1px solid black">x</span></li>
             <li class="buttons__digit buttons__digit-division">

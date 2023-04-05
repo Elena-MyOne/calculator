@@ -124,6 +124,18 @@ export function getSquareRoot(target: HTMLElement, input: HTMLInputElement): voi
   }
 }
 
+export function getOneDivideByNumber(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement): void {
+  if(target.closest('.buttons__digit-one-divide')) {
+    let valueDisplay = input.value;
+    if (valueDisplay === '0') {
+      input.value = '0';
+      operation.textContent = 'Cannot divide by zero'
+    } else {
+      input.value = (1 / +valueDisplay).toString();
+    }
+  }
+}
+
 export function calculate(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement) {
   if (target.closest('.buttons__digit-equally')) {
     const operationValue = operation.textContent;
