@@ -97,6 +97,19 @@ export function addDot(target: HTMLElement, input: HTMLInputElement): void {
   }
 }
 
+export function getPercent(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement): void {
+  if(target.closest('.buttons__digit-percent')) {
+    let valueDisplay = input.value;
+    const operationValue = operation.textContent;
+    let percent = '0';
+    if (operationValue) {
+      const number = parseFloat(operationValue);
+      percent = (number * +valueDisplay / 100).toString();
+    }
+    input.value = percent;
+  }
+}
+
 export function calculate(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement) {
   if (target.closest('.buttons__digit-equally')) {
     const operationValue = operation.textContent;

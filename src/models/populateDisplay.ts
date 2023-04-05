@@ -1,5 +1,5 @@
 import { animateButton } from "./animations";
-import { displayDigit, add, calculate, subtract, multiply, divide, clear, deleteSymbol, makeNegative, addDot } from "./mathFunctions";
+import { displayDigit, add, calculate, subtract, multiply, divide, clear, deleteSymbol, makeNegative, addDot, getPercent } from "./mathFunctions";
 
 export function populateDisplay(e: Event): void {
   const input = document.querySelector('.display__input') as HTMLInputElement;
@@ -18,6 +18,7 @@ export function populateDisplay(e: Event): void {
       calculate(target, operationDisplay, input);
       makeNegative(target, input);
       addDot(target, input);
+      getPercent(target, operationDisplay, input);
     }
 
     // console.log('input', input.value);
