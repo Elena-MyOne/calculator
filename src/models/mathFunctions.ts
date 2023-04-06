@@ -35,26 +35,26 @@ function makeOperation(symbol: string, operation: HTMLElement, input: HTMLInputE
     input.value = '0';
 }
 
-export function add(symbol: string, target: HTMLElement, operation: HTMLElement, input: HTMLInputElement): void {
-  if (target.closest('.buttons__digit-add')) {
+export function add(symbol: string, target: HTMLElement, operation: HTMLElement, input: HTMLInputElement, key: string): void {
+  if (target.closest('.buttons__digit-add') || key === '+') {
     makeOperation(symbol, operation, input);
   }
 }
 
-export function subtract(symbol: string, target: HTMLElement, operation: HTMLElement, input: HTMLInputElement): void {
-  if (target.closest('.buttons__digit-subtract')) {
+export function subtract(symbol: string, target: HTMLElement, operation: HTMLElement, input: HTMLInputElement, key: string): void {
+  if (target.closest('.buttons__digit-subtract') || key === '-') {
     makeOperation(symbol, operation, input);
   }
 }
 
-export function multiply(symbol: string, target: HTMLElement, operation: HTMLElement, input: HTMLInputElement): void {
-  if (target.closest('.buttons__digit-multiply')) {
+export function multiply(symbol: string, target: HTMLElement, operation: HTMLElement, input: HTMLInputElement, key: string): void {
+  if (target.closest('.buttons__digit-multiply') || key === '*') {
     makeOperation(symbol, operation, input);
   }
 }
 
-export function divide(symbol: string, target: HTMLElement, operation: HTMLElement, input: HTMLInputElement): void {
-  if (target.closest('.buttons__digit-division')) {
+export function divide(symbol: string, target: HTMLElement, operation: HTMLElement, input: HTMLInputElement, key: string): void {
+  if (target.closest('.buttons__digit-division') || key === '/') {
     makeOperation(symbol, operation, input);
   }
 }

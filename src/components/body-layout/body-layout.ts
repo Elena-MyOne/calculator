@@ -53,7 +53,8 @@ export function renderBody() {
     body.append(root);
   }
 
-  (root.querySelector('.calc__body') as HTMLElement).onclick = populateDisplay;
+  (root.querySelector('.calc__body') as HTMLElement).addEventListener('click', populateDisplay);
+  window.addEventListener('keydown', populateDisplay)
 }
 
 
