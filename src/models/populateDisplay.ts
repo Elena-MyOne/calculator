@@ -20,7 +20,7 @@ export function populateDisplay(e: Event | KeyboardEvent): void {
     clear(target, operationDisplay, input, key);
     deleteSymbol(target, input, key);
     calculate(target, operationDisplay, input);
-    makeNegative(target, input);
+    makeNegative(target, input, key);
     addDot(target, input, key);
     getPercent(target, operationDisplay, input);
     square(target, input);

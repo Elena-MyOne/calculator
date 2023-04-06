@@ -78,8 +78,8 @@ export function deleteSymbol(target: HTMLElement, input: HTMLInputElement, key: 
   }
 }
 
-export function makeNegative(target: HTMLElement, input: HTMLInputElement): void {
-  if(target.closest('.buttons__digit-negative')) {
+export function makeNegative(target: HTMLElement, input: HTMLInputElement, key: string): void {
+  if(target.closest('.buttons__digit-negative') || key === 'F9') {
     let valueDisplay = input.value;
     if (valueDisplay.startsWith('-')) {
       const newValue = valueDisplay.slice(1);
