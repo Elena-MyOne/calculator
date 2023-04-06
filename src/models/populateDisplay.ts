@@ -24,8 +24,4 @@ export function populateDisplay(e: Event): void {
       getOneDivideByNumber(target, operationDisplay, input);
       getFactorial(target, input);
     }
-
-    // console.log('input', input.value);
-    // console.log('memory', memory);
-    // console.log(target);
 }
