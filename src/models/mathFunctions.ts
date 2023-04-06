@@ -136,6 +136,22 @@ export function getOneDivideByNumber(target: HTMLElement, operation: HTMLElement
   }
 }
 
+export function getFactorial(target: HTMLElement, input: HTMLInputElement): void {
+  if(target.closest('.buttons__digit-factorial')) {
+    let valueDisplay = input.value;
+    let counter = +valueDisplay;
+    let result = +valueDisplay;
+    if(valueDisplay === '0' || valueDisplay === '1') {
+      input.value = '1';
+    }
+    while (counter > 1) {
+      counter -= 1;
+      result *= counter;
+    }
+    input.value = result.toString();
+  }
+}
+
 export function calculate(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement) {
   if (target.closest('.buttons__digit-equally')) {
     const operationValue = operation.textContent;

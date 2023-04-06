@@ -1,5 +1,5 @@
 import { animateButton } from "./animations";
-import { displayDigit, add, calculate, subtract, multiply, divide, clear, deleteSymbol, makeNegative, addDot, getPercent, square, getSquareRoot, getOneDivideByNumber } from "./mathFunctions";
+import { displayDigit, add, calculate, subtract, multiply, divide, clear, deleteSymbol, makeNegative, addDot, getPercent, square, getSquareRoot, getOneDivideByNumber, getFactorial } from "./mathFunctions";
 
 export function populateDisplay(e: Event): void {
   const input = document.querySelector('.display__input') as HTMLInputElement;
@@ -22,6 +22,7 @@ export function populateDisplay(e: Event): void {
       square(target, input);
       getSquareRoot(target, input);
       getOneDivideByNumber(target, operationDisplay, input);
+      getFactorial(target, input);
     }
 
     // console.log('input', input.value);

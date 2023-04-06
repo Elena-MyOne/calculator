@@ -16,7 +16,7 @@ export function renderBody() {
         <div class="calc__buttons buttons">
           <ul class="buttons__digits">
             <li class="buttons__digit buttons__digit-percent">%</li>
-            <li class="buttons__digit ">x!</li>
+            <li class="buttons__digit buttons__digit-factorial">x!</li>
             <li class="buttons__digit buttons__digit-clear">AC</li>
             <li class="buttons__digit buttons__digit-del">DEL</li>
             <li class="buttons__digit buttons__digit-one-divide">1/x</li>
