@@ -23,8 +23,8 @@ export function populateDisplay(e: Event | KeyboardEvent): void {
     makeNegative(target, input, key);
     addDot(target, input, key);
     getPercent(target, operationDisplay, input, key);
-    square(target, input);
-    getSquareRoot(target, input);
+    square(target, input, key);
+    getSquareRoot(target, input, key);
     getOneDivideByNumber(target, operationDisplay, input, key);
     getFactorial(target, input, key);
   }

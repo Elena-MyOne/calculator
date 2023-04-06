@@ -110,15 +110,15 @@ export function getPercent(target: HTMLElement, operation: HTMLElement, input: H
   }
 }
 
-export function square(target: HTMLElement, input: HTMLInputElement): void {
-  if(target.closest('.buttons__digit-square')) {
+export function square(target: HTMLElement, input: HTMLInputElement, key: string): void {
+  if(target.closest('.buttons__digit-square') || key === 'Q' || key === 'q') {
     let valueDisplay = input.value;
     input.value = Math.pow(+valueDisplay, 2).toString();
   }
 }
 
-export function getSquareRoot(target: HTMLElement, input: HTMLInputElement): void {
-  if(target.closest('.buttons__digit-square-root')) {
+export function getSquareRoot(target: HTMLElement, input: HTMLInputElement, key: string): void {
+  if(target.closest('.buttons__digit-square-root') || key === '@') {
     let valueDisplay = input.value;
     input.value = Math.sqrt(+valueDisplay).toString();
   }
