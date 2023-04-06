@@ -59,15 +59,15 @@ export function divide(symbol: string, target: HTMLElement, operation: HTMLEleme
   }
 }
 
-export function clear(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement): void {
-  if(target.closest('.buttons__digit-clear')) {
+export function clear(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement, key: string): void {
+  if(target.closest('.buttons__digit-clear') || key === 'Delete') {
     operation.textContent = '';
     input.value = '0';
   }
 }
 
-export function deleteSymbol(target: HTMLElement, input: HTMLInputElement): void {
-  if(target.closest('.buttons__digit-del')) {
+export function deleteSymbol(target: HTMLElement, input: HTMLInputElement, key: string): void {
+  if(target.closest('.buttons__digit-del') || key === 'Backspace') {
     let valueDisplay = input.value;
     if (valueDisplay.length === 1) {
       input.value = '0';
@@ -90,8 +90,8 @@ export function makeNegative(target: HTMLElement, input: HTMLInputElement): void
   }
 }
 
-export function addDot(target: HTMLElement, input: HTMLInputElement): void {
-  if(target.closest('.buttons__digit-dot')) {
+export function addDot(target: HTMLElement, input: HTMLInputElement, key: string): void {
+  if(target.closest('.buttons__digit-dot') || key === '.') {
     let valueDisplay = input.value;
     input.value = `${valueDisplay}.`
   }

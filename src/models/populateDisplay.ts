@@ -17,11 +17,11 @@ export function populateDisplay(e: Event | KeyboardEvent): void {
     subtract('-', target, operationDisplay, input, key);
     multiply('x', target, operationDisplay, input, key);
     divide('/', target, operationDisplay, input, key);
-    clear(target, operationDisplay, input);
-    deleteSymbol(target, input);
+    clear(target, operationDisplay, input, key);
+    deleteSymbol(target, input, key);
     calculate(target, operationDisplay, input);
     makeNegative(target, input);
-    addDot(target, input);
+    addDot(target, input, key);
     getPercent(target, operationDisplay, input);
     square(target, input);
     getSquareRoot(target, input);
