@@ -97,8 +97,8 @@ export function addDot(target: HTMLElement, input: HTMLInputElement, key: string
   }
 }
 
-export function getPercent(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement): void {
-  if(target.closest('.buttons__digit-percent')) {
+export function getPercent(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement, key: string): void {
+  if(target.closest('.buttons__digit-percent') || key === '%') {
     let valueDisplay = input.value;
     const operationValue = operation.textContent;
     let percent = '0';
@@ -168,19 +168,38 @@ export function calculate(target: HTMLElement, operation: HTMLElement, input: HT
   }
 }
 
-export function displayDigit(target: HTMLElement, input: HTMLInputElement): string {
+export function displayDigit(target: HTMLElement, input: HTMLInputElement, key: string): string {
   let memory = '0';
 
-  if (target.closest('.buttons__digit-number')) {
+  function defineResult(value: string, inputText: string | null): string {
+    const result = value + inputText;
+    input.value = result;
+    return result;
+  }
+
+  if (
+    target.closest('.buttons__digit-number') ||
+    key === '1' || key === '2' || key === '3' || key === '4' || key === '5' ||
+    key === '6' || key === '7' || key === '8' || key === '9' || key === '0'
+  ) {
 
     if(input) {
       let valueDisplay = input.value;
       if (valueDisplay === '0') {
         valueDisplay = ''
       }
-      const result = valueDisplay + target.textContent;
-      input.value = result;
-      memory = result;
+      if (target) {
+        memory = defineResult(valueDisplay, target.textContent);
+        // const result = valueDisplay + target.textContent;
+        // input.value = result;
+        // memory = result;
+      }
+      if (key) {
+        memory = defineResult(valueDisplay, key)
+        // const result = valueDisplay + key;
+        // input.value = result;
+        // memory = result;
+      }
     }
   }
   return memory

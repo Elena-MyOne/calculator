@@ -12,7 +12,7 @@ export function populateDisplay(e: Event | KeyboardEvent): void {
 
   if(target || key) {
     animateButton(target);
-    displayDigit(target, input);
+    displayDigit(target, input, key);
     add('+', target, operationDisplay, input, key);
     subtract('-', target, operationDisplay, input, key);
     multiply('x', target, operationDisplay, input, key);
@@ -22,7 +22,7 @@ export function populateDisplay(e: Event | KeyboardEvent): void {
     calculate(target, operationDisplay, input);
     makeNegative(target, input, key);
     addDot(target, input, key);
-    getPercent(target, operationDisplay, input);
+    getPercent(target, operationDisplay, input, key);
     square(target, input);
     getSquareRoot(target, input);
     getOneDivideByNumber(target, operationDisplay, input);
