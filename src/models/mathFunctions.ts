@@ -152,8 +152,8 @@ export function getFactorial(target: HTMLElement, input: HTMLInputElement): void
   }
 }
 
-export function calculate(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement) {
-  if (target.closest('.buttons__digit-equally')) {
+export function calculate(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement, key: string) {
+  if (target.closest('.buttons__digit-equally') || key === '=' || key === 'Enter') {
     const operationValue = operation.textContent;
     const inputValue = input.value;
     let result = 0;
@@ -190,15 +190,9 @@ export function displayDigit(target: HTMLElement, input: HTMLInputElement, key: 
       }
       if (target) {
         memory = defineResult(valueDisplay, target.textContent);
-        // const result = valueDisplay + target.textContent;
-        // input.value = result;
-        // memory = result;
       }
       if (key) {
         memory = defineResult(valueDisplay, key)
-        // const result = valueDisplay + key;
-        // input.value = result;
-        // memory = result;
       }
     }
   }

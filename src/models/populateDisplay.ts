@@ -19,7 +19,7 @@ export function populateDisplay(e: Event | KeyboardEvent): void {
     divide('/', target, operationDisplay, input, key);
     clear(target, operationDisplay, input, key);
     deleteSymbol(target, input, key);
-    calculate(target, operationDisplay, input);
+    calculate(target, operationDisplay, input, key);
     makeNegative(target, input, key);
     addDot(target, input, key);
     getPercent(target, operationDisplay, input, key);
