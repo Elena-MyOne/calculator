@@ -25,7 +25,7 @@ export function populateDisplay(e: Event | KeyboardEvent): void {
     getPercent(target, operationDisplay, input, key);
     square(target, input);
     getSquareRoot(target, input);
-    getOneDivideByNumber(target, operationDisplay, input);
-    getFactorial(target, input);
+    getOneDivideByNumber(target, operationDisplay, input, key);
+    getFactorial(target, input, key);
   }
 }

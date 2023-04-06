@@ -124,8 +124,8 @@ export function getSquareRoot(target: HTMLElement, input: HTMLInputElement): voi
   }
 }
 
-export function getOneDivideByNumber(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement): void {
-  if(target.closest('.buttons__digit-one-divide')) {
+export function getOneDivideByNumber(target: HTMLElement, operation: HTMLElement, input: HTMLInputElement, key: string): void {
+  if(target.closest('.buttons__digit-one-divide') || key === 'R' || key === 'r') {
     let valueDisplay = input.value;
     if (valueDisplay === '0') {
       input.value = '0';
@@ -136,8 +136,8 @@ export function getOneDivideByNumber(target: HTMLElement, operation: HTMLElement
   }
 }
 
-export function getFactorial(target: HTMLElement, input: HTMLInputElement): void {
-  if(target.closest('.buttons__digit-factorial')) {
+export function getFactorial(target: HTMLElement, input: HTMLInputElement, key: string): void {
+  if(target.closest('.buttons__digit-factorial') || key === '!') {
     let valueDisplay = input.value;
     let counter = +valueDisplay;
     let result = +valueDisplay;
