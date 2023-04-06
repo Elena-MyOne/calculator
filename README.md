@@ -1,6 +1,6 @@
 # Calculator
 
-## Math operations
+### Math operations
 
 The calculator has the following cases:
 
@@ -14,7 +14,7 @@ The calculator has the following cases:
 - get a square root from a number
 - square a number
 
-## Keyboard shortcuts
+### Keyboard shortcuts
 
 It is possible to manage calculations by using a mouse and a keyboard.
 
@@ -28,7 +28,7 @@ keyboard shortcuts:
 
 `/` - to divide input values
 
-``Delete` - to clear up input display
+`Delete` - to clear up input display
 
 `Backspace` - to delete one symbol from the input display
 
@@ -49,3 +49,7 @@ keyboard shortcuts:
 `=` or `Enter` - to calculate the result
 
 keys from `0` to `9` - to input numbers
+
+### Animations and theme changing
+
+### Saving results into localStorage
