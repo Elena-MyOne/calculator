@@ -1,12 +1,24 @@
 import { populateDisplay } from "../../models/populateDisplay";
+import { changeColorTheme, setTheme} from "../../models/animations";
 
 const body = document.querySelector('body');
 
 export function renderBody() {
   const root = document.createElement('div');
-  root.classList.add('root')
+  root.classList.add('root');
+
+  const theme = localStorage.getItem('theme') || 'dark';
+  console.log(theme);
 
   root.innerHTML = `
+    <header class="header">
+      <nav class="nav">
+        <ul class="nav__items">
+          <li class="nav__item nav__item-shortcuts">Keyboard shortcuts</li>
+          <li class="nav__item nav__item-img"><img src="../../assets/icons/${(theme === 'dark') ? 'light' : 'dark'}.svg"></li>
+        </ul>
+      </nav>
+    </header>
     <div class="calc">
       <div class="calc__body">
         <div class="calc__display display">
@@ -21,16 +33,12 @@ export function renderBody() {
             <li class="buttons__digit buttons__digit-del">DEL</li>
             <li class="buttons__digit buttons__digit-one-divide">1/x</li>
             <li class="buttons__digit buttons__digit-square">x<sup>2</sup></li>
-            <li class="buttons__digit buttons__digit-square-root"><span>&#8730;</span><span style="border-top: 1px solid black">x</span></li>
-            <li class="buttons__digit buttons__digit-division">
-              <img src="../../assets/icons/division.svg" alt="" />
-            </li>
+            <li class="buttons__digit buttons__digit-square-root"><span>&#8730;</span><span class="buttons__square-root-top">x</span></li>
+            <li class="buttons__digit buttons__digit-division">/</li>
             <li class="buttons__digit buttons__digit-number">7</li>
             <li class="buttons__digit buttons__digit-number">8</li>
             <li class="buttons__digit buttons__digit-number">9</li>
-            <li class="buttons__digit buttons__digit-multiply">
-              <img src="../../assets/icons/multiply.svg" alt="" />
-            </li>
+            <li class="buttons__digit buttons__digit-multiply">x</li>
             <li class="buttons__digit buttons__digit-number">4</li>
             <li class="buttons__digit buttons__digit-number">5</li>
             <li class="buttons__digit buttons__digit-number">6</li>
@@ -54,7 +62,9 @@ export function renderBody() {
   }
 
   (root.querySelector('.calc__body') as HTMLElement).addEventListener('click', populateDisplay);
-  window.addEventListener('keydown', populateDisplay)
+  (root.querySelector('.nav') as HTMLElement).addEventListener('click', changeColorTheme);
+  window.addEventListener('keydown', populateDisplay);
+  window.addEventListener('load', setTheme);
 }
 
 

@@ -21,18 +21,18 @@ function operateResults(operation: string, input: string): number {
 
 function makeOperation(symbol: string, operation: HTMLElement, input: HTMLInputElement): void {
   const inputValue = input.value;
-    const operationValue = operation.textContent;
-    let result = 0;
-    if (operationValue === '') {
-      operation.textContent = `${inputValue} ${symbol}`;
-      result = +inputValue;
-    } else {
-      if (operationValue) {
-        result += operateResults(operationValue, inputValue)
-        operation.textContent = `${result} ${symbol}`;
-      }
+  const operationValue = operation.textContent;
+  let result = 0;
+  if (operationValue === '') {
+    operation.textContent = `${inputValue} ${symbol}`;
+    result = +inputValue;
+  } else {
+    if (operationValue) {
+      result += operateResults(operationValue, inputValue)
+      operation.textContent = `${result} ${symbol}`;
     }
-    input.value = '0';
+  }
+  input.value = '0';
 }
 
 export function add(symbol: string, target: HTMLElement, operation: HTMLElement, input: HTMLInputElement, key: string): void {
@@ -71,6 +71,7 @@ export function deleteSymbol(target: HTMLElement, input: HTMLInputElement, key: 
     let valueDisplay = input.value;
     if (valueDisplay.length === 1) {
       input.value = '0';
+      localStorage.setItem('inputValue', '0');
     } else {
       const newValue = valueDisplay.slice(0, -1);
       input.value = newValue;
