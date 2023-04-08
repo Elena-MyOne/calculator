@@ -1,5 +1,5 @@
 import { populateDisplay } from "../../models/populateDisplay";
-import { changeColorTheme, setTheme} from "../../models/animations";
+import { changeColorTheme, setTheme, showShortcuts} from "../../models/animations";
 
 const body = document.querySelector('body');
 
@@ -13,7 +13,28 @@ export function renderBody() {
     <header class="header">
       <nav class="nav">
         <ul class="nav__items">
-          <li class="nav__item nav__item-shortcuts text">Keyboard shortcuts</li>
+          <li class="nav__item nav__item-shortcuts text">
+            <div class="hidden__title">Keyboard shortcuts</div>
+            <div class="nav__item-hidden hidden">
+              <ul>
+                <li class="hidden__item text-right"><span class="hidden__shortcut close">+</span></li>
+                <li class="hidden__item"><span class="hidden__shortcut">+</span> - to add input values</li>
+                <li class="hidden__item"><span class="hidden__shortcut">-</span> - to subtract input values</li>
+                <li class="hidden__item"><span class="hidden__shortcut">*</span> - to multiplicate input values</li>
+                <li class="hidden__item"><span class="hidden__shortcut">/</span> - to divide input values</li>
+                <li class="hidden__item"><span class="hidden__shortcut">Delete</span> - to clear up input display</li>
+                <li class="hidden__item"><span class="hidden__shortcut">Backspace</span> - to delete one symbol from the input display</li>
+                <li class="hidden__item"><span class="hidden__shortcut">F9</span> - to change input value from positive to negative and back</li>
+                <li class="hidden__item"><span class="hidden__shortcut">.</span> - to add a dot to an input value</li>
+                <li class="hidden__item"><span class="hidden__shortcut">Q</span> or <span class="hidden__shortcut">q</span> - to get a square of an input value</li>
+                <li class="hidden__item"><span class="hidden__shortcut">@</span> - to get a square root of an input value</li>
+                <li class="hidden__item"><span class="hidden__shortcut">R</span> or <span class="hidden__shortcut">r</span> - to divide 1 into an input value</li>
+                <li class="hidden__item"><span class="hidden__shortcut">!</span> - to get factorial from an input value</li>
+                <li class="hidden__item"><span class="hidden__shortcut">=</span> or <span class="hidden__shortcut">Enter</span> - to calculate the result</li>
+                <li class="hidden__item">keys from <span class="hidden__shortcut">0</span> to <span class="hidden__shortcut">9</span> - to input numbers</li>
+              </ul>
+            </div>
+          </li>
           <li class="nav__item nav__item-img"><img src="../../assets/icons/${(theme === 'dark') ? 'light' : 'dark'}.svg"></li>
         </ul>
       </nav>
@@ -66,6 +87,7 @@ export function renderBody() {
 
   (root.querySelector('.calc__body') as HTMLElement).addEventListener('click', populateDisplay);
   (root.querySelector('.nav') as HTMLElement).addEventListener('click', changeColorTheme);
+  (root.querySelector('.nav') as HTMLElement).addEventListener('click', showShortcuts);
   window.addEventListener('keydown', populateDisplay);
   window.addEventListener('load', setTheme);
 }

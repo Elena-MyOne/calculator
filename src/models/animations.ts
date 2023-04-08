@@ -108,3 +108,25 @@ function styleLightTheme(root: HTMLElement) {
   });
   squareRootTop.style.borderTop = '1px solid #222222';
 }
+
+export function showShortcuts(e: Event): void {
+  const target = e.target as HTMLElement;
+
+  function hidePopup() {
+    const hiddenPopup = document.querySelector('.nav__item-hidden') as HTMLElement;
+      if (hiddenPopup.classList.contains('hidden')) {
+        hiddenPopup.classList.remove('hidden')
+      } else {
+        hiddenPopup.classList.add('hidden')
+      }
+  }
+
+  if (target) {
+    if(target.closest('.hidden__title')) {
+      hidePopup()
+    }
+    if(target.closest('.close')) {
+      hidePopup()
+    }
+  }
+}

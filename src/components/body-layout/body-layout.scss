@@ -1,5 +1,6 @@
 .nav {
   padding: 10px;
+  position: relative;
   &__items {
     display: flex;
     justify-content: flex-end;
@@ -10,6 +11,48 @@
     height: 40px;
     width: 40px;
   }
+  &__item-shortcuts {
+    
+  }
+
+  &__item-hidden {
+    position: absolute;
+    right: 5%;
+    top: 60px;
+    width: 350px;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding:  5px 20px 20px;
+    border-radius: 5px;
+  }
+}
+
+.hidden__item {
+  padding-bottom: 5px;
+}
+
+.hidden__shortcut {
+  padding: 3px;
+  font-style: italic;
+  color: $textHoverColor;
+}
+
+.nav__item-hidden.hidden {
+  display: none;
+}
+
+.close {
+  font-size: 30px;
+  transform: rotate(45deg);
+  display: inline-block;
+  text-align: right;
+  transition: all 0.3s ease 0s;
+  &:hover{
+    opacity: 0.8;
+  }
+}
+
+.text-right {
+  text-align: right;
 }
 
 .calc {
