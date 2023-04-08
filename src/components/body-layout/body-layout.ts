@@ -13,12 +13,12 @@ export function renderBody() {
     <header class="header">
       <nav class="nav">
         <ul class="nav__items">
-          <li class="nav__item nav__item-shortcuts">Keyboard shortcuts</li>
+          <li class="nav__item nav__item-shortcuts text">Keyboard shortcuts</li>
           <li class="nav__item nav__item-img"><img src="../../assets/icons/${(theme === 'dark') ? 'light' : 'dark'}.svg"></li>
         </ul>
       </nav>
     </header>
-    <div class="calc">
+    <main class="calc">
       <div class="calc__body">
         <div class="calc__display display">
           <div class="display__operation"></div>
@@ -53,7 +53,11 @@ export function renderBody() {
           </ul>
         </div>
       </div>
-    </div>
+    </main>
+    <footer class="footer">
+      <span class="footer__text text">&copy; Developed by</span>
+      <a class="footer__link" href="https://github.com/Elena-MyOne" target="_blank">Elena-MyOne</a>
+    </footer>
   `
 
   if (body) {

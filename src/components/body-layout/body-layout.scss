@@ -16,7 +16,7 @@
    display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 90vh;
   &__body {
     width: 490px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -77,5 +77,16 @@
   }
   &__square-root-top {
     border-top: 1px solid $colorMain;
+  }
+}
+
+.footer {
+  text-align: center;
+  &__link {
+    color: $digitColor;
+    transition: all 0.3s ease 0s;
+    &:hover{
+      color: $textHoverColor;
+    }
   }
 }

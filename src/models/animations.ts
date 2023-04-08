@@ -68,14 +68,16 @@ export function changeIcon(target: HTMLElement): void {
 }
 
 function styleDarkTheme(root: HTMLElement) {
-  const text = document.querySelector('.nav__item-shortcuts') as HTMLElement;
+  const text = document.querySelectorAll('.text') as NodeListOf<HTMLElement>;
   const buttons = document.querySelector('.buttons__digits') as HTMLElement;
   const calcBody = document.querySelector('.calc__body') as HTMLElement;
   const digits = document.querySelectorAll('.buttons__digit') as NodeListOf<HTMLElement>;
   const input = document.querySelector('.display__input') as HTMLInputElement;
   const squareRootTop = document.querySelector('.buttons__square-root-top') as HTMLInputElement;
   root.style.backgroundColor = '#2A2A2A';
-  text.style.color = '#EDEDED';
+  text.forEach((item) => {
+    item.style.color = '#EDEDED'
+  })
   buttons.style.color = '#EDEDED';
   calcBody.style.backgroundColor = '#414141';
   input.style.backgroundColor = '#414141';
@@ -87,14 +89,16 @@ function styleDarkTheme(root: HTMLElement) {
 }
 
 function styleLightTheme(root: HTMLElement) {
-  const text = document.querySelector('.nav__item-shortcuts') as HTMLElement;
+  const text = document.querySelectorAll('.text') as NodeListOf<HTMLElement>;
   const buttons = document.querySelector('.buttons__digits') as HTMLElement;
   const calcBody = document.querySelector('.calc__body') as HTMLElement;
   const digits = document.querySelectorAll('.buttons__digit') as NodeListOf<HTMLElement>;
   const input = document.querySelector('.display__input') as HTMLInputElement;
   const squareRootTop = document.querySelector('.buttons__square-root-top') as HTMLInputElement;
   root.style.backgroundColor = '#EDEDED';
-  text.style.color = '#222222';
+  text.forEach((item) => {
+    item.style.color = '#222222'
+  })
   buttons.style.color = '#222222';
   calcBody.style.backgroundColor = '#FCFCFC';
   input.style.backgroundColor = '#FCFCFC';
