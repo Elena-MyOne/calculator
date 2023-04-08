@@ -52,4 +52,4 @@ keys from `0` to `9` - to input numbers
 
 ### Animations and theme changing
 
-### Saving results into localStorage
+Implemented functionality change of theme with saving current stage to localStorage.
