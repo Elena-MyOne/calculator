@@ -1,6 +1,6 @@
 # Calculator
 
-![ ] (/src/assets/images/view.png)
+![ ](/src/assets/images/view.png)
 
 ### Math operations
 
