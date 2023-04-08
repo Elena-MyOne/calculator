@@ -1,5 +1,7 @@
 # Calculator
 
+![ ] (assets/images/view.png)
+
 ### Math operations
 
 The calculator has the following cases:
