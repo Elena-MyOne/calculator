@@ -43,7 +43,6 @@ export function changeIcon(target: HTMLElement): void {
 
   if (target.closest('.nav__item-img')) {
     let theme = localStorage.getItem('theme') || 'dark';
-    console.log('click icon: ', theme);
 
     if (theme === 'dark') {
       if (image) {

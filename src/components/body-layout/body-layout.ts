@@ -8,7 +8,6 @@ export function renderBody() {
   root.classList.add('root');
 
   const theme = localStorage.getItem('theme') || 'dark';
-  console.log(theme);
 
   root.innerHTML = `
     <header class="header">

@@ -104,8 +104,14 @@ export function getPercent(target: HTMLElement, operation: HTMLElement, input: H
     const operationValue = operation.textContent;
     let percent = '0';
     if (operationValue) {
-      const number = parseFloat(operationValue);
-      percent = (number * +valueDisplay / 100).toString();
+      if (operationValue === 'Cannot divide by zero') {
+        input.value = percent;
+        operation.textContent = '';
+      } else {
+        const number = parseFloat(operationValue);
+        percent = (number * +valueDisplay / 100).toString();
+      }
+      
     }
     input.value = percent;
   }
