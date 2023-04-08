@@ -1,4 +1,5 @@
 # Calculator
+![Live Preview](https://elena-myone.github.io/calculator/dist/)
 
 ![ ](/src/assets/images/view.png)
 
