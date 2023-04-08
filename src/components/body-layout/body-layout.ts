@@ -35,7 +35,7 @@ export function renderBody() {
               </ul>
             </div>
           </li>
-          <li class="nav__item nav__item-img"><img src="../../assets/icons/${(theme === 'dark') ? 'light' : 'dark'}.svg"></li>
+          <li class="nav__item nav__item-img"><img src="./assets/icons/${(theme === 'dark') ? 'light' : 'dark'}.svg"></li>
         </ul>
       </nav>
     </header>
